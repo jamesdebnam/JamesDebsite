@@ -1,15 +1,40 @@
+@keyframes slide-in {
+  from {
+    transform: translate(20em, -0.1em) scale(0.85, 1);
+    color: #63e0bd;
+  }
+
+  to {
+    transition-timing-function: ease;
+  }
+}
+body{
+  background-color: #e4fff8;
+}
+
 h1 {
   font-family: 'Heebo', sans-serif;
-  font-size: 5em;
+  font-size: 5rem;
+  /* justify-content: flex-end; */
+  padding-top: 0.5em;
+  padding-left: 1em;
+  animation-name: slide-in;
+  animation-duration: 3s;
 }
+
 .skewed-header {
   transform: skewY(-4deg);
   transform-origin: top left;
-  position: absolute;
-  height: 40vh;
+  position: relative;
+  height: 13em;
   width: 100%;
   background-color: #63e0bd;
+  box-shadow: 0 4px 5px 2px gray;
 }
-p {
-  
+
+.text-box {
+  position: relative;
+  top: 30vh;
+  font-family: Nanum Gothic;
+  width: 40vw;
 }
