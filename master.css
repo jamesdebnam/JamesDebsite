@@ -137,7 +137,7 @@ ul{
 
 }
 
-@media (max-width: 480px){
+@media (max-width: 500px){
   .skewed-header {
     height: 25vw;
     min-width: 100%;
@@ -155,5 +155,16 @@ ul{
     width:80vw;
     height: 107vw;
     
+  }
+  #left{
+    height: 8vw;
+  }
+  #right{
+    height: 8vw;
+  }
+  .carousel-indicator{
+  height:2.4vw;
+  width:2.4vw;
+  margin-inline: 1.5vw;
   }
 }

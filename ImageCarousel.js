@@ -7,8 +7,15 @@ const carouselPic = document.querySelector('.carousel-pic-only')
 let slideWidth = slides[0].getBoundingClientRect().width;
 
 for (let i = 0; i < slides.length; i++) {
-    slides[i].style.left = slideWidth * i + "px";  
+    slides[i].style.left = slideWidth * i + "px";
 }
+window.addEventListener('resize', ()=> {
+    slideWidth = slides[0].getBoundingClientRect().width;
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.left = slideWidth * i + "px";
+    }
+});
+
 
 let slideNumber = 0
 
