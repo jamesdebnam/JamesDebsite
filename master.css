@@ -9,7 +9,7 @@
   }
 }
 body {
-  background-color: #e4fff8;
+  background-color: #e4fff8cc;
 }
 
 h1 {
@@ -20,7 +20,10 @@ h1 {
   animation-name: slide-in;
   animation-duration: 3s;
 }
-
+h2 {
+  font-family: "Heebo", sans-serif;
+  text-align: center;
+}
 .skewed-header {
   transform: skewY(-3deg);
   transform-origin: top left;
@@ -34,10 +37,11 @@ h1 {
   background-color: #63e0bd;
 }
 
-.text-box {
+.intro {
   top: 30vh;
-  font-family: Nanum Gothic;
-
+  font-family: "Nanum Gothic";
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -57,10 +61,9 @@ h1 {
 .carousel-pic-pane {
   height: 100%;
   position: relative;
-  background-color: cyan;
-  border: solid 5px #63e0bd;
+  border: solid 3px #71b1b6;
   border-radius: 1%;
-  box-shadow: 0px 0px 20px -6px #00573175;
+  box-shadow: 0px 0px 24px -6px #00573175;
   overflow: hidden;
 }
 
@@ -159,6 +162,32 @@ ul {
   transition: all 0.3s ease;
 }
 
+.about-me-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.about-me-list-header {
+  position: relative;
+  font-family: "Nanum Gothic";
+  top: 5%;
+  text-align: center;
+}
+
+.about-me-list-text {
+  position: relative;
+  font-family: "Nanum Gothic";
+  text-align: center;
+  max-width: 400px;
+}
+.pic-me {
+  max-width: 400px;
+  border: solid 2px gray;
+  border-radius: 5px;
+  box-shadow: 0px 0px 24px -6px #00573175;
+}
+
 @media (max-width: 500px) {
   .skewed-header {
     height: 25vw;
@@ -192,5 +221,9 @@ ul {
     height: 2.4vw;
     width: 2.4vw;
     margin-inline: 1.5vw;
+  }
+  .image-text {
+    font-size: 2.6vw;
+    margin-top: 7%;
   }
 }
