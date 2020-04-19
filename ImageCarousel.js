@@ -1,44 +1,24 @@
-// let numToWord = {
-//   1:'one',
-//   2:'two',
-//   3:'three',
-//   4:'four',
-//   5:'five'
-// }
-// let picNum = 1
-// let visiblePicture = document.querySelector(`#${numToWord[picNum]}`)
-// visiblePicture.hidden= false
-//
-// let leftArrow = document.querySelector('#left')
-// let rightArrow = document.querySelector('#right')
-//
-// leftArrow.addEventListener('click', () => {
-//   if (picNum==1) {
-//     picNum=5;
-//   } else {picNum--}
-//   visiblePicture.hidden=true
-//   visiblePicture = document.querySelector(`#${numToWord[picNum]}`)
-//   visiblePicture.hidden= false
-// })
-//
-// rightArrow.addEventListener('click', () => {
-//   if (picNum==5) {
-//     picNum=1;
-//   } else {picNum++}
-//   visiblePicture.hidden=true
-//   visiblePicture = document.querySelector(`#${numToWord[picNum]}`)
-//   visiblePicture.hidden= false
-// })
-const carousel_track = document.querySelector('.carousel')
-const panes = Array.from(carousel_track.children)
 
-let spaceBefore = 0
-panes.forEach((slide, index) => {
-    let slideWidth = slide.getBoundingClientRect().width;
-    if (index > 0) {
-        slide.style.left = slideWidth 
+let leftArrow = document.querySelector('#left')
+let rightArrow = document.querySelector('#right')
+const carousel = document.querySelector('.carousel-list');
+const slides = Array.from(carousel.children);
+const carouselPic = document.querySelector('.carousel-pic-only')
+let slideWidth = slides[0].getBoundingClientRect().width;
 
-    }
-    
-    
-});
+for (let i = 0; i < slides.length; i++) {
+    slides[i].style.left = slideWidth * i + "px";  
+}
+
+let slideNumber = 0
+
+leftArrow.addEventListener('click', () => {
+    slideNumber = (slideNumber == 0) ? 8 : slideNumber-1;
+    carouselPic.style.transform = `translateX(-${slideWidth*slideNumber}px)`
+  
+})
+
+rightArrow.addEventListener('click', () => {
+    slideNumber = (slideNumber == 8) ? 0 : slideNumber + 1;
+    carouselPic.style.transform = `translateX(-${slideWidth*slideNumber}px)`
+})
