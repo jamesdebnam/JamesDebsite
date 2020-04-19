@@ -115,7 +115,18 @@ ul{
   cursor: pointer;
   transition: all 0.8s ease;
 }
-.arrows:hover{
+
+#play-pause{
+  position: absolute;
+  width:auto;
+  height:1.8vw;
+  bottom: 3%;
+  right:3%;
+
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+.controls:hover{
   opacity: 50%;
 }
 
@@ -163,6 +174,11 @@ ul{
   #right{
     height: 8vw;
   }
+
+  #play-pause{
+    height: 7vw;
+  }
+  
   .carousel-indicator{
   height:2.4vw;
   width:2.4vw;

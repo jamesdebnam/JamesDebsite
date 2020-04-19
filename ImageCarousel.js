@@ -1,12 +1,13 @@
 
 const leftArrow = document.querySelector('#left');
 const rightArrow = document.querySelector('#right');
+const playPause = document.querySelector('#play-pause');
 const carousel = document.querySelector('.carousel-list');
 const slides = Array.from(carousel.children);
 const carouselPic = document.querySelector('.carousel-pic-only');
 const indicators = document.querySelector('.indicators');
 const indicatorDots = Array.from(indicators.children);
-
+let isPlaying = false
 let slideWidth = slides[0].getBoundingClientRect().width;
 
 for (let i = 0; i < slides.length; i++) {
@@ -36,6 +37,8 @@ leftArrow.addEventListener('click', slideLeft);
 
 rightArrow.addEventListener('click', slideRight);
 
+playPause.addEventListener('click', togglePlay)
+
 function dotColor() {
     for (dot of indicatorDots) {
         dot.style.backgroundColor = '#667c8d';
@@ -53,4 +56,22 @@ function slideRight() {
     slideNumber = (slideNumber == 8) ? 0 : slideNumber + 1;
     carouselPic.style.transform = `translateX(-${slideWidth * slideNumber}px)`;
     dotColor();    
+}
+
+let interval = null;
+
+function togglePlay() {
+    if (isPlaying) {
+
+        isPlaying = false;
+        playPause.src = 'icons/play.svg'
+        clearInterval(interval)
+
+    } else {
+
+        isPlaying = true;
+        playPause.src = 'icons/pause.svg'
+        interval = setInterval(slideRight, 3000)
+
+    }
 }
