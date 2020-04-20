@@ -51,6 +51,7 @@ rightArrow.addEventListener("click", slideRight);
 
 playPause.addEventListener("click", togglePlay);
 
+// Resets the dot colors, and darkens the corresponding picture dot
 function dotColor() {
   for (dot of indicatorDots) {
     dot.style.backgroundColor = "#667c8d";
@@ -86,6 +87,6 @@ function togglePlay() {
   } else {
     isPlaying = true;
     playPause.src = "icons/pause.svg";
-    interval = setInterval(slideRight, 3000);
+    interval = setInterval(slideRight, 2500);
   }
 }
