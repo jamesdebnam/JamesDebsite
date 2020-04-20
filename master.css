@@ -39,15 +39,6 @@ h5 {
   color: #000000c0;
   margin-left: 3.1em;
 }
-.skewed-segment-one {
-  transform: skewY(-2deg);
-  background: cover;
-  background-color: #abece9;
-  margin-left: -3em;
-  margin-top: -10%;
-  padding-top: 10%;
-  z-index: 2;
-}
 .skewed-segment-two {
   transform: skewY(-1deg);
   background: cover;
@@ -55,7 +46,18 @@ h5 {
   margin-left: -3em;
   margin-top: -10%;
   padding-top: 10%;
+  position: relative;
   z-index: 1;
+}
+.skewed-segment-one {
+  transform: skewY(-2deg);
+  background: cover;
+  background-color: #abece9;
+  margin-left: -3em;
+  margin-top: -10%;
+  padding-top: 10%;
+  position: relative;
+  z-index: 2;
 }
 .skewed-header {
   transform: skewY(-3deg);
@@ -210,9 +212,11 @@ ul {
 
 .about-me-list-header {
   position: relative;
-  font-family: "Nanum Gothic";
+  font-family: "Heebo";
+  transform: skewY(-1deg);
   top: 5%;
   text-align: center;
+  font-size: 1.3em;
 }
 
 .about-me-list-text {
