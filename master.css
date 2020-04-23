@@ -14,6 +14,7 @@ h5 {
 h1 {
   font-size: 3em;
   padding-top: 1em;
+  position: absolute;
   margin-left: 0.5em;
   animation-name: slide-in;
   animation-duration: 3s;
@@ -41,6 +42,7 @@ h5 {
   font-size: 1.3em;
   color: #000000c0;
   margin-left: 1.5em;
+  margin-right: 0.8em;
 }
 /* Skewed background */
 .skewed-segment-two,
@@ -64,7 +66,7 @@ h5 {
   transform: skewY(-3deg);
   transform-origin: top left;
   position: relative;
-  height: 7em;
+  height: 9em;
   margin-top: -3em;
   background: cover;
   background-color: #63e0bd;
@@ -217,13 +219,11 @@ footer {
   width: auto;
 }
 /* Mobile compatibility */
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .skewed-header {
-    height: 25vw;
-    min-width: 100%;
-    margin-left: -5vw;
+    height: 30vw;
+    width: 100%;
     margin-top: -8vw;
-    margin-right: -2.5vw;
   }
 
   h1 {
